@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Header from "./components/Header";
+import Calendar from "./components/Calendar";
 
 function App() {
   const [currentMonth, setCurrentMonth] = useState(new Date().getMonth());
@@ -23,7 +24,7 @@ function App() {
         onPrevMonth={handlePrevMonth}
         onNextMonth={handleNextMonth}
       />
-      
+      <Calendar currentMonth={currentMonth} currentYear={currentYear} />
     </React.Fragment>
   );
 }
